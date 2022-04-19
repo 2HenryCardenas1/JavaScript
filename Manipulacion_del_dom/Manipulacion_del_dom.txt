@@ -1,0 +1,102 @@
+[!] DOM => Document Object Model && CSSOM => CSS Object Model
+
+"Nos convierte nuestro codigo a pixeles"
+
+- Es una representacion del HTML para
+
+- Estructura en forma de arbol de nodos 
+
+- Es un modelo que puede ser modificado 
+
+[!] WEB API
+
+API => puente para coneccion de aplicaciones 
+
+
+[!] LECTURA DE NODOS =>
+
+Estos son selectores optimos para una aplicacion 
+
+- document.getElementById => Obtener un elemento por su ID para
+
+- document.getElementByTagName => Obtener elemento por nombre de etiquetas, retorna un arreglo 
+
+- document.getElementByClassName => Obtener elemento por nombre de la clase , retorna un arreglo 
+
+Selectores optimos (tener encuenta los CSS selectors para la hora de la busqueda)
+
+- parentElement.querySelector => nos permite traer o seleccionar cualquier elemento segun le indiquemos
+
+- parentElement.querySelectorAll => nos retorna una lista del elemento buscado 
+
+
+
+[!] NODELIST VS ARRAYS
+
+NODELIST => carece de operaciones que el array tiene.
+
+Pero se puede convertir un nodelist a un array de la siguiente forma: 
+
+    Nomenclatura:
+        const nodelistAsArray = [... nodelist];
+
+    Aplicacion:
+        const nodelistAsArray = [document.querySelectorAll(".clase,#id o tag ")];
+        document.querySelectorAll
+
+Ya relizada la convercion de un nodelist a un array podriamos acceder a los metodos normales de un array.
+
+
+[!] Crar y agregar NODOS
+
+
+Solo se pueden crear dos tipos de nodos (un elemento o un texto)
+
+    [!] Nomenclatura para crear un elemento:
+
+        document.createElement(ETIQUETA QUE SE QUIERA CREAR)
+
+    [!] Aplicacion:
+          Creacion de una etiqueta h1
+
+            document.createElement("H1")
+
+
+    [!] Nomenclatura para crear un texto: 
+
+        document.createTextNode("TEXTO")
+
+    [!] Aplicacion:
+            
+        document.createTextNode("Hola")
+
+
+[!] Agregar nodos
+
+
+    - parentElement.appendChild() = agregar elemento
+
+    - parentElement.append() = agregar varios elementos
+
+    - parentElement.insertBefore(nodo, referencia) = insertar despues de la referencia dada
+
+    -referencia.insertAdjacentElement("referencia", nodo) = insertar elemeto segun la referencia dada.
+        Referencias : 
+                    - beforebegin = nos pone el nodo antes de la referencia
+                    - afterbegin = nos pone el nodo despues de la referencias 
+                    - beforeend = nos pone el nodo despues de que se acabe la etiqueta de la referencia
+                    - afterend = nos pone el nodo a lo ultimo de la referencia 
+
+[!] Atributos y propiedades.
+
+    - Los atributos son utilizados unicamente al inicio del HTML, las propiedades si cambia
+
+[!] Eliminar NODOS
+
+    -parentElement.removeChild(nodo) = Podemos eliminar un nodo según a un método que proviene del
+                                       padre y pasamos la referencia a eliminar
+
+    -nodo.remove() = Eliminamos el nodo indicado
+
+    -document.replaceChild(nuevoNodo, nodo_A_remplazar)= Nos permite remplazar un nodo
+
