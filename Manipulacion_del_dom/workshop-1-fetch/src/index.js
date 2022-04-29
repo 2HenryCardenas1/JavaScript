@@ -39,7 +39,7 @@ window.fetch(`${url}/api/avo`)
             //name = item.name
             const name = document.createElement("h1");
             name.textContent = item.name;
-            name.className = "text-lg";
+            name.className = "text-lg ";
             //image = item.image
             const image = document.createElement("img");
             image.src = `${url}${item.image}`;
