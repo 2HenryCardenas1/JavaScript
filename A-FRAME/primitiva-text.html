@@ -1,0 +1,19 @@
+<html>
+  <header>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </header>
+  <body>
+    <a-scene >
+      <a-entity>
+      <!--dir = direccion a la que hara la animacion-->
+      <a-text position="-1 1.5 -1" value="Hola Mundo con A-FRAME" rotation="0 15 0" align="center" font="mozillavr" anchor="center"
+              animation="property:rotation; from:0 0 0 ; to: 0 90 0; loop:true; delay:1000;dur:5000;dir:alternate"></a-text>
+        
+       <a-box position="4 1.5 -4" color="#fec6ba" animation="property: material.color; from:#fec6ba; to: #FF0000; loop:true;dur:2000"
+              animation__2="property:rotation; from : 0 0 0; to : 0 360 0; loop:true; dir:alternate;dur:4000"></a-box>
+    </a-entity>
+      <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
+  
+</html>
